@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: stijntjedejongh1991-bit/medihulp
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+locale: 'nl'
+
+collections:
+  - name: "instellingen"
+    label: "Instellingen"
+    files:
+      - name: "algemeen"
+        label: "Algemene teksten"
+        file: "content/algemeen.json"
+        fields:
+          - {label: "Hero titel", name: "hero_titel", widget: "string"}
+          - {label: "Hero ondertitel", name: "hero_subtitel", widget: "text"}
+          - {label: "Jaren actief", name: "jaren_actief", widget: "string"}
+          - {label: "Projecten ondersteund", name: "projecten", widget: "string"}
+
+      - name: "huidig_project"
+        label: "Huidig project"
+        file: "content/project.json"
+        fields:
+          - {label: "Projectnaam", name: "naam", widget: "string"}
+          - {label: "Land", name: "land", widget: "string"}
+          - {label: "Beschrijving", name: "beschrijving", widget: "text"}
+          - {label: "Website link", name: "link", widget: "string"}
+
+      - name: "acties"
+        label: "Acties"
+        file: "content/acties.json"
+        fields:
+          - {label: "Ontbijt status", name: "ontbijt_status", widget: "string"}
+          - {label: "Quiz status", name: "quiz_status", widget: "string"}
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.json"
+        fields:
+          - {label: "E-mailadres", name: "email", widget: "string"}
+          - {label: "Facebook URL", name: "facebook", widget: "string"}
+          - {label: "Instagram URL", name: "instagram", widget: "string"}
