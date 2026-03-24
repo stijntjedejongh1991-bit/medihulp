@@ -1,0 +1,99 @@
+backend:
+  name: github
+  repo: stijntjedejongh1991-bit/medihulp
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+locale: 'nl'
+
+collections:
+  - name: "instellingen"
+    label: "Instellingen"
+    files:
+      - name: "algemeen"
+        label: "Algemene teksten"
+        file: "content/algemeen.json"
+        fields:
+          - label: "Hero titel"
+            name: "hero_titel"
+            widget: "string"
+            hint: "Grote titel op de homepage, bv. 'Duurzame medische hulp in de derde wereld'"
+          - label: "Hero ondertitel"
+            name: "hero_subtitel"
+            widget: "text"
+            hint: "Korte beschrijving onder de hoofdtitel"
+          - label: "Jaren actief"
+            name: "jaren_actief"
+            widget: "string"
+            default: "40+"
+          - label: "Projecten ondersteund"
+            name: "projecten"
+            widget: "string"
+            default: "25+"
+
+      - name: "over_ons"
+        label: "Over ons"
+        file: "content/over-ons.json"
+        fields:
+          - label: "Tekst alinea 1"
+            name: "alinea1"
+            widget: "text"
+          - label: "Tekst alinea 2"
+            name: "alinea2"
+            widget: "text"
+
+      - name: "huidig_project"
+        label: "Huidig project"
+        file: "content/project.json"
+        fields:
+          - label: "Projectnaam"
+            name: "naam"
+            widget: "string"
+            hint: "bv. Connection in Care"
+          - label: "Land"
+            name: "land"
+            widget: "string"
+            hint: "bv. Gambia"
+          - label: "Beschrijving"
+            name: "beschrijving"
+            widget: "text"
+          - label: "Website link"
+            name: "link"
+            widget: "string"
+            hint: "bv. https://www.connectionincare.com/"
+          - label: "Tags"
+            name: "tags"
+            widget: "list"
+            hint: "bv. Tandheelkunde, Geboortehuis, Preventie"
+
+      - name: "acties"
+        label: "Acties"
+        file: "content/acties.json"
+        fields:
+          - label: "Ontbijtpakketten — status"
+            name: "ontbijt_status"
+            widget: "string"
+            hint: "bv. 'Meer info volgt in het najaar.' of 'Inschrijven kan hier!'"
+          - label: "Quiz — status"
+            name: "quiz_status"
+            widget: "string"
+            hint: "bv. 'De quiz van 2025 heeft plaatsgevonden. Tot volgend jaar!'"
+          - label: "Quiz — beschrijving"
+            name: "quiz_beschrijving"
+            widget: "text"
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.json"
+        fields:
+          - label: "E-mailadres"
+            name: "email"
+            widget: "string"
+          - label: "Facebook URL"
+            name: "facebook"
+            widget: "string"
+          - label: "Instagram URL"
+            name: "instagram"
+            widget: "string"
