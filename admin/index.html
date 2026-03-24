@@ -1,11 +1,296 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medihulp — Beheerpaneel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medihulp — Medische Hulp in de Derde Wereld</title>
+  <meta name="description" content="Medihulp steunt kleinschalige, duurzame medische en paramedische projecten in de derde wereld — al meer dan 40 jaar.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">
+    <img src="logo-nav.jpg" alt="Medihulp logo">
+    Medihulp
+  </a>
+  <ul class="nav-links">
+    <li><a href="#over-ons">Over ons</a></li>
+    <li><a href="#team">Ons team</a></li>
+    <li><a href="#projecten">Projecten</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBIEL MENU -->
+<div class="nav-mobile-menu" id="mobile-menu">
+  <a href="#over-ons" onclick="closeMenu()">Over ons</a>
+  <a href="#team" onclick="closeMenu()">Ons team</a>
+  <a href="#projecten" onclick="closeMenu()">Projecten</a>
+  <a href="#partners" onclick="closeMenu()">Partners</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-left">
+    <img src="logo.jpg" alt="Medihulp" class="hero-logo">
+    <span class="hero-tag">40 jaar medische solidariteit</span>
+    <h1 class="hero-title">
+      Duurzame <em>medische hulp</em><br>in de derde wereld
+    </h1>
+    <p class="hero-sub">
+      Medihulp steunt kleinschalige, duurzame medische en paramedische projecten in ontwikkelingslanden — door en voor de lokale bevolking.
+    </p>
+    <div class="hero-cta">
+      <a href="#projecten" class="btn-primary">Ons huidig project</a>
+      <a href="#over-ons" class="btn-secondary">Over ons</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">40+</span>
+        <p class="stat-label">jaar actief</p>
+      </div>
+      <div>
+        <span class="stat-num">25+</span>
+        <p class="stat-label">projecten ondersteund</p>
+      </div>
+      <div>
+        <span class="stat-num">2</span>
+        <p class="stat-label">acties per jaar</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-inner">
+      <div class="hero-pill">
+        <span class="hero-pill-label">Huidig project</span>
+        <strong>Connection in Care</strong>
+        <span>Tandheelkunde &amp; geboortehuis — Gambia</span>
+      </div>
+      <div class="hero-pill">
+        <span class="hero-pill-label">Onze aanpak</span>
+        <strong>Lokaal verankerd</strong>
+        <span>Zelfredzame projecten, langetermijnvisie</span>
+      </div>
+      <div class="hero-pill">
+        <span class="hero-pill-label">Jaarlijkse acties</span>
+        <strong>Quiz &amp; ontbijtpakketten</strong>
+        <span>Opbrengst gaat 100% naar de projecten</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVER ONS -->
+<section id="over-ons">
+  <div class="section-inner" style="max-width:1000px">
+    <div class="over-ons-grid">
+      <div class="over-ons-text">
+        <p class="section-label">Wie zijn we</p>
+        <h2 class="section-title">Medische solidariteit met een lange adem</h2>
+        <p>Medihulp is een vrijwilligersorganisatie die al meer dan 40 jaar kleinschalige medische en paramedische projecten ondersteunt in de derde wereld. We geloven dat echte hulp duurzaam moet zijn: geworteld in de lokale cultuur, gedragen door de gemeenschap zelf.</p>
+        <p>Onze acties — een jaarlijkse quiz en ontbijtpakkettenverkoop — brengen mensen samen rond een concreet doel. De opbrengst gaat integraal naar zorgvuldig geselecteerde projecten.</p>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <span class="principle-icon">🌱</span>
+          <div class="principle-text">
+            <strong>Duurzaamheid first</strong>
+            We investeren alleen in projecten met een langetermijnvisie, geïntegreerd in de lokale context.
+          </div>
+        </div>
+        <div class="principle">
+          <span class="principle-icon">🤝</span>
+          <div class="principle-text">
+            <strong>Lokale regie</strong>
+            Projecten worden gestuurd door de lokale bevolking — niet vanuit het Westen.
+          </div>
+        </div>
+        <div class="principle">
+          <span class="principle-icon">🔍</span>
+          <div class="principle-text">
+            <strong>Transparantie &amp; controle</strong>
+            Steun wordt in schijven uitbetaald. Tussentijdse evaluaties zijn standaard.
+          </div>
+        </div>
+        <div class="principle">
+          <span class="principle-icon">⚖️</span>
+          <div class="principle-text">
+            <strong>Kwaliteit boven kwantiteit</strong>
+            Kleinschalig betekent niet onprofessioneel. Elk project voldoet aan strikte criteria.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONS TEAM -->
+<section id="team">
+  <div class="section-inner" style="max-width:1000px">
+    <p class="section-label">Ons team</p>
+    <h2 class="section-title">De vrijwilligers achter Medihulp</h2>
+    <p class="team-intro">Medihulp draait volledig op vrijwilligers — mensen die geloven in de kracht van kleine, gerichte hulp. In februari 2025 vierden we samen onze 40ste verjaardag.</p>
+    <div class="portraits-grid">
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-fien.jpg" alt="Fien"></div>
+        <span class="portrait-name">Fien</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-guido.jpg" alt="Guido"></div>
+        <span class="portrait-name">Guido</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-helena.jpg" alt="Helena"></div>
+        <span class="portrait-name">Helena</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-hilde.jpg" alt="Hilde"></div>
+        <span class="portrait-name">Hilde</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-lindee.jpg" alt="Lindee"></div>
+        <span class="portrait-name">Lindee</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-marijke.jpg" alt="Marijke"></div>
+        <span class="portrait-name">Marijke</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-mathilde.jpg" alt="Mathilde"></div>
+        <span class="portrait-name">Mathilde</span>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-circle"><img src="portret-nele.jpg" alt="Nele"></div>
+        <span class="portrait-name">Nele</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTEN -->
+<section id="projecten">
+  <div class="section-inner" style="max-width:1000px">
+    <p class="section-label">Projecten</p>
+    <h2 class="section-title">Connection in Care</h2>
+    <p class="project-desc">
+      Via onze jaarlijkse quiz steunden we Connection in Care — een project dat tandheelkundige zorg en een geboortehuis combineert voor gemeenschappen in Gambia. Het project werkt met lokale zorgverleners en legt de focus op preventie en structurele versterking van de gezondheidszorg.
+    </p>
+    <div class="project-tags">
+      <span class="tag">🌍 Gambia</span>
+      <span class="tag">Tandheelkunde</span>
+      <span class="tag">Geboortehuis</span>
+      <span class="tag">Preventie</span>
+    </div>
+    <a href="https://www.connectionincare.com/" target="_blank" class="btn-primary" style="display:inline-block;margin-bottom:3rem;">Meer info over Connection in Care</a>
+
+    <div class="past-projects">
+      <h4>Eerder ondersteunde regio's &amp; projecten</h4>
+      <div class="countries-list">
+        <span class="country-chip">India — Calcutta Sponsor Aid</span>
+        <span class="country-chip">RDCongo — Kindu</span>
+        <span class="country-chip">RDCongo — Kalehe</span>
+        <span class="country-chip">Kameroen — EducateMe</span>
+        <span class="country-chip">Senegal — SORA</span>
+        <span class="country-chip">Senegal — Makoye Kafo</span>
+        <span class="country-chip">Tanzania — Sunrise of Life</span>
+        <span class="country-chip">Ecuador — Tapori</span>
+        <span class="country-chip">Guatemala — Vivir en Amor</span>
+        <span class="country-chip">Tsjernobyl — Project Anja</span>
+        <span class="country-chip">India — SCAD Dorpen</span>
+        <span class="country-chip">India — Rangaroon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIES -->
+<section id="acties">
+  <div class="section-inner" style="max-width:1000px">
+    <p class="section-label">Onze acties</p>
+    <h2 class="section-title">Hoe zamelen we in?</h2>
+    <div class="acties-grid">
+      <div class="actie-card">
+        <p class="actie-maand">Ieder najaar</p>
+        <h3>Ontbijtpakkettenverkoop</h3>
+        <p>Elk najaar verkopen onze vrijwilligers ontbijtpakketten in de buurt. Een lekkere manier om bij te dragen aan medische hulp ver weg. De volledige opbrengst gaat naar het project van dat jaar.</p>
+        <span class="actie-status">Meer info volgt in het najaar.</span>
+      </div>
+      <div class="actie-card">
+        <p class="actie-maand">Ieder voorjaar</p>
+        <h3>Jaarlijkse quiz</h3>
+        <p>Onze populaire pubquiz brengt jaarlijks tientallen deelnemers samen. Gezellig, competitief — en het goede doel profiteert mee. De opbrengst van 2025 gaat naar Connection in Care in Gambia.</p>
+        <span class="actie-status">De quiz van 2025 heeft plaatsgevonden. Tot volgend jaar!</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <div class="section-inner" style="max-width:900px">
+    <p class="section-label">Partners &amp; Sponsors</p>
+    <h2 class="section-title">Samen maken we het mogelijk</h2>
+    <p class="partners-sub">Medihulp werkt samen met lokale organisaties, sponsors en gelijkgestemde verenigingen. Wil je partner worden? Neem contact op.</p>
+    <div class="partners-logo-grid">
+      <div class="partner-logo"><img src="sponsor-colruytresized.png" alt="Colruyt"></div>
+      <div class="partner-logo"><img src="sponsor-kinepolis.png" alt="Kinepolis"></div>
+      <div class="partner-logo"><img src="sponsor-dierendonck.png" alt="Dierendonck"></div>
+      <div class="partner-logo"><img src="sponsor-temmerman-home-logo-bd.png" alt="Temmerman"></div>
+      <div class="partner-logo"><img src="sponsor-vanmarcke_logo_staand_rgb_1.png" alt="Vanmarcke"></div>
+      <div class="partner-logo"><img src="sponsor-benu.png" alt="BENU"></div>
+      <div class="partner-logo"><img src="sponsor-de-witte-lietaer.png" alt="De Witte Lietaer"></div>
+      <div class="partner-logo"><img src="sponsor-bossuwe.png" alt="Bossuwe"></div>
+      <div class="partner-logo"><img src="sponsor-zonder-meer.png" alt="Zonder Meer"></div>
+      <div class="partner-logo"><img src="sponsor-maison-cinematique.png" alt="Maison Cinématique"></div>
+      <div class="partner-logo"><img src="sponsor-000logo-zwart.png" alt="Sponsor"></div>
+      <div class="partner-logo"><img src="sponsor-florist-vercamer.png" alt="Florist Vercamer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner" style="max-width:1000px">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Neem contact op</h2>
+        <p>Vragen over onze werking, projecten of acties? Stuur ons een bericht — we antwoorden zo snel mogelijk.</p>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <span><a href="mailto:medihulpvzw@gmail.com">medihulpvzw@gmail.com</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📘</div>
+          <span><a href="https://www.facebook.com/medihulp" target="_blank">Facebook</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📸</div>
+          <span><a href="https://www.instagram.com/medihulp/" target="_blank">Instagram</a></span>
+        </div>
+      </div>
+      <div class="volunteer-box">
+        <h3>Word vrijwilliger</h3>
+        <p>Medihulp draait volledig op vrijwilligers. Wil je meehelpen bij de organisatie van acties, communicatie of projectopvolging? We horen graag van je!</p>
+        <a href="mailto:medihulpvzw@gmail.com?subject=Ik%20wil%20vrijwilliger%20worden" class="btn-white">Stuur ons een mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 <strong>Medihulp</strong> — Medische Hulp in de Derde Wereld &middot; Vrijwilligersorganisatie &middot; België</p>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
